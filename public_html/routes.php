@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\HomeController;
+use App\Controllers\AuthenticationController;
 use App\Controllers\ErrorController;
 
 use App\Models\Exceptions\ModelNotFoundException;
@@ -18,13 +19,40 @@ try {
             break;
 
 // ---------------------------------------------
-        // case "login":
+        case "login":
 
-        //     $controller = new AuthenticationController();
-        //     $controller->login();
+            $controller = new AuthenticationController();
+            $controller->login();
 
-        //     break;
+            break;
 
+        case "auth.attempt":
+
+            $controller = new AuthenticationController();
+            $controller->attempt();
+
+            break;
+
+        case "register":
+
+            $controller = new AuthenticationController();
+            $controller->register();
+
+            break;
+
+        case "auth.store":
+
+            $controller = new AuthenticationController();
+            $controller->store();
+
+            break;
+
+        case "logout":
+
+            $controller = new AuthenticationController();
+            $controller->logout();
+
+        break;
 // ---------------------------------------------
 
 		default:

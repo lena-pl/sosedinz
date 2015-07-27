@@ -1,5 +1,6 @@
 <?php
 
+require "../sosedinz-config.inc.php";
 require "vendor/autoload.php";
 
 session_start();

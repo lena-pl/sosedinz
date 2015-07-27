@@ -36,7 +36,7 @@
                 <li <?php if ($page === "auth.register"): ?> class="active" <?php endif; ?>><a href="./?page=register">Register</a></li>
                 <li <?php if ($page === "auth.login"): ?> class="active" <?php endif; ?>><a href="./?page=login">Login</a></li>
               <?php else: ?>
-                <li><a href="#"><?= static::$auth->user()->email; ?></a></li>
+                <li><a href="#"><?= static::$auth->user()->username; ?></a></li>
                 <li><a href="./?page=logout">Logout</a></li>
               <?php endif; ?>
             </ul>
