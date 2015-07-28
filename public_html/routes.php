@@ -21,14 +21,14 @@ try {
 // ---------------------------------------------
         case "login":
 
-            $controller = new HomeController();
+            $controller = new AuthenticationController();
             $controller->login();
 
             break;
 
         case "auth.attempt":
 
-            $controller = new HomeController();
+            $controller = new AuthenticationController();
             $controller->attempt();
 
             break;
