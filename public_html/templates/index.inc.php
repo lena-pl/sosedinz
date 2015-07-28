@@ -1,9 +1,53 @@
+<?php
+    $errors = $user->errors;
+    // error_reporting(E_ALL & ~E_NOTICE);
+?>
+
      <div class="row">
         <div class="col-xs-12">
 
           <h1 class="text-center">sosediNZ</h1>
         </div>
       </div>
+<!--==================================== LOGIN FORM =======================================-->
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+          <form method="POST" action="./?page=auth.attempt" class="form-horizontal">
+
+            <?php if ($error): ?>
+              <div class="alert alert-warning" role="alert"><strong>Warning:</strong> No user with that email and password combination was found. Check spelling/capitalisation and try again.</div>
+            <?php endif; ?>
+
+            <div class="form-group form-group-lg<?php if ($errors['email']): ?> has-error <?php endif; ?>">
+              <div>
+                <input id="email" class="form-control input-lg" name="email"
+                  placeholder="Email Address"
+                  value="<?= $user->email; ?>">
+                <div class="help-block"><?= $errors['email']; ?></div>
+              </div>
+            </div>
+
+            <div class="form-group form-group-lg<?php if ($errors['password']): ?> has-error <?php endif; ?>">
+              <div>
+                <input id="password" class="form-control input-lg" name="password" type="password" placeholder="Password">
+                <div class="help-block"><?= $errors['password']; ?></div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <div>
+                <button class="btn btn-block btn-success">
+                  <span class="glyphicon glyphicon-ok"></span> Log in
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+<!-- ============================================================================================= -->
 
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">

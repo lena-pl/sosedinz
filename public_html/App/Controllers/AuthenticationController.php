@@ -30,34 +30,14 @@ class AuthenticationController extends Controller
 
         $user->save();
 
-        header("Location: ./?page=login");
-    }
-
-    public function login()
-    {
-        $user = $this->getUserFormData();
-        $error = isset($_GET['error']) ? $_GET['error'] : null;
-
-        $view = new LoginFormView(compact('user','error'));
-        $view->render();
-    }
-
-    public function attempt()
-    {
-        if (static::$auth->attempt($_POST['email'], $_POST['password'])) {
-            // login successful
-            header("Location: ./");
-            exit();
-        }
-        header("Location: ./?page=login&error=true");
-        exit();
+        header("Location: ./");
     }
 
     public function logout()
     {
         static::$auth->logout();
 
-        header("Location: ./?page=login");
+        header("Location: ./");
         exit();
     }
 

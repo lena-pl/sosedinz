@@ -15,7 +15,8 @@ class User extends DatabaseModel
         'username'    => 'minlength:1',
         'email'       => 'email,unique:App\Models\User',
         'password'    => 'minlength:6',
-        'password2'   => 'match:password'
+        'password2'   => 'match:password',
+        'bio'         => 'minlength:10'
     ];
 
     function __construct($input = null)
