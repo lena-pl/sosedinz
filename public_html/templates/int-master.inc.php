@@ -58,6 +58,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= static::$auth->user()->username; ?> <b class="caret"></b></a>
               <ul class="dropdown-menu">
+                <li><a href="./?page=home">Dashboard</a></li>
                 <li><a href="./?page=account.edit">Edit Account</a></li>
                 <li class="divider"></li>
                 <li><a href="./?page=logout">Logout</a></li>
