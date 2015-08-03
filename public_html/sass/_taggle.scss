@@ -4,13 +4,15 @@
   padding: 0;
   float: left;
   width: 100%;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+}
 
 /* line 250, ../../../sass/projects/taggle/taggle.scss */
 .taggle_input {
   border: none;
   outline: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 /* line 257, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list li {
@@ -18,7 +20,8 @@
   display: inline-block;
   white-space: nowrap;
   font-weight: 500;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 /* line 265, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list .taggle {
@@ -39,11 +42,13 @@
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
-  animation-fill-mode: both; }
+  animation-fill-mode: both;
+}
 
 /* line 283, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list .taggle_hot {
-  background: #cac8c4; }
+  background: #cac8c4;
+}
 
 /* line 287, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list .taggle .close {
@@ -57,7 +62,8 @@
   color: #ccc;
   color: rgba(0, 0, 0, 0.2);
   padding-bottom: 4px;
-  display: none; }
+  display: none;
+}
 
 /* line 302, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list .taggle:hover {
@@ -67,15 +73,18 @@
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+}
 
 /* line 309, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list .taggle:hover > .close {
-  display: block; }
+  display: block;
+}
 
 /* line 313, ../../../sass/projects/taggle/taggle.scss */
 .taggle_list .taggle .close:hover {
-  color: #990033; }
+  color: #990033;
+}
 
 /* line 317, ../../../sass/projects/taggle/taggle.scss */
 .taggle_placeholder {
@@ -89,7 +98,8 @@
   transition: opacity, 0.25s;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none; }
+  -ms-user-select: none;
+}
 
 /* line 328, ../../../sass/projects/taggle/taggle.scss */
 .taggle_input {
@@ -99,7 +109,8 @@
   margin-top: -5px;
   background: none;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /* line 338, ../../../sass/projects/taggle/taggle.scss */
 .taggle_sizer {
@@ -108,9 +119,5 @@
   position: absolute;
   top: -500px;
   z-index: -1;
-  visibility: hidden; }
-
-footer {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-  margin-top: 10px; }
+  visibility: hidden;
+}

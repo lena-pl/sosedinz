@@ -50,7 +50,6 @@
       <?php $this->content (); ?>
 
       <footer>
-        <hr>
         <p>© <?php echo date("Y") ?> sosediNZ</p>
       </footer>
 

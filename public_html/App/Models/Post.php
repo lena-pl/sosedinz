@@ -16,8 +16,13 @@ class Post extends DatabaseModel
     protected static $validationRules = [
     	'title' 	  => 'minlength:1',
         'user_id'     => 'numeric,exists:\App\Models\User',
-    	'content' 		  => 'minlength:140'
+    	'content' 	  => 'minlength:140'
     ];
+
+    public function user()
+    {
+        return new User($this->user_id);
+    }
 
     public function comments()
     {

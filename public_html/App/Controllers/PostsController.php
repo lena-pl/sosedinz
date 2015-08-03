@@ -24,8 +24,6 @@ class PostsController extends Controller
 
     public function create()
     {
-        static::$auth->mustBeUser();
-
         $post = $this->getPostFormData();
 
         $view = new PostFormView(compact('post'));
@@ -35,9 +33,9 @@ class PostsController extends Controller
     public function store()
     {
 
-        static::$auth->mustBeUser();
-
-        $post = new post($_POST);
+        $input = $_POST;
+        $input['user_id'] = static::$auth->user()->id;
+        $post = new Post($input);
 
         if (is_array($post->tags)) {
             $post->tags = implode($post->tags, ",");
@@ -62,18 +60,18 @@ class PostsController extends Controller
 
     public function edit()
     {
-        static::$auth->mustBeUser();
+        static::$auth->mustBeOwner();
         $post = $this->getPostFormData($_GET['id']);
         $post->loadTags();
 
-        $view = new postFormView(compact('post', 'tags'));
+        $view = new PostFormView(compact('post', 'tags'));
         $view->render();
     }
 
     public function update()
     {
 
-        static::$auth->mustBeUser();
+        static::$auth->mustBeOwner();
 
         $post = new post($_POST['id']);
         $post->processArray($_POST);
@@ -104,7 +102,7 @@ class PostsController extends Controller
 
     public function destroy()
     {
-        static::$auth->mustBeUser();
+        static::$auth->mustBeOwner();
 
         post::destroy($_POST['id']);
 

@@ -114,11 +114,9 @@ class AuthenticationService
    }
 
 //---------------------------------
-   public function isOwner()
+   public function isOwner($owner_id)
    {
-        if (! static::$currentUser->id === static::$auth->user()->id) {
-            return false;
-        }
+        return static::$currentUser->id === $owner_id;
    }
 
    public function mustBeOwner()

@@ -60,7 +60,7 @@ try {
         case "dash":
 
             $controller = new DashController();
-            $controller->index();
+            $controller->show();
 
             break;
 
