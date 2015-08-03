@@ -9,7 +9,7 @@ class Error404View extends TemplateView
     {
         $page_title = "404 Page Not Found";
         $page="error404";
-        include "templates/master.inc.php";
+        include "templates/int-master.inc.php";
     }
 
     protected function content()

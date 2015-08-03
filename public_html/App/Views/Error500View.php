@@ -9,7 +9,7 @@ class Error500View extends TemplateView
     {
         $page_title = "500 Internal Error";
         $page="error500";
-        include "templates/master.inc.php";
+        include "templates/int-master.inc.php";
     }
 
     protected function content()

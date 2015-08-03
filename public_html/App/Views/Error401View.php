@@ -9,7 +9,7 @@ class Error401View extends TemplateView
     {
         $page_title = "401 Unauthorised";
         $page="error401";
-        include "templates/master.inc.php";
+        include "templates/int-master.inc.php";
     }
 
     protected function content()
