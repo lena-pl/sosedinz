@@ -10,7 +10,7 @@
               <label for="username" class="col-sm-4 col-md-2 control-label">Username</label>
               <div class="col-sm-8 col-md-10">
                 <input id="username" class="form-control input-lg" name="username"
-                  placeholder="Ash"
+                  placeholder="your_username"
                   value="<?= $user->username; ?>">
                 <div class="help-block"><?= $errors['username']; ?></div>
               </div>
@@ -20,7 +20,7 @@
               <label for="email" class="col-sm-4 col-md-2 control-label">Email Address</label>
               <div class="col-sm-8 col-md-10">
                 <input id="email" class="form-control input-lg" name="email"
-                  placeholder="ash@s-mart.com"
+                  placeholder="you@example.com"
                   value="<?= $user->email; ?>">
                 <div class="help-block"><?= $errors['email']; ?></div>
               </div>

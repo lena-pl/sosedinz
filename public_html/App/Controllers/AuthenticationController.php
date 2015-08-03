@@ -51,7 +51,7 @@ class AuthenticationController extends Controller
     {
         if (static::$auth->attempt($_POST['email'], $_POST['password'])) {
             // login successful
-            header("Location: ./");
+            header("Location: ./?page=dash");
             exit();
         }
         header("Location: ./?error=true");

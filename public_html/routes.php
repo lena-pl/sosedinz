@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\HomeController;
+use App\Controllers\DashController;
 use App\Controllers\AuthenticationController;
 use App\Controllers\ErrorController;
 
@@ -53,6 +54,14 @@ try {
             $controller->logout();
 
         break;
+// ---------------------------------------------
+        case "dash":
+
+            $controller = new DashController();
+            $controller->index();
+
+            break;
+
 // ---------------------------------------------
 
 		default:

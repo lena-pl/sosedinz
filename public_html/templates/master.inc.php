@@ -15,6 +15,10 @@
   <body>
 
     <div class="container">
+
+<!-- ======================================================================================= -->
+              <!-- HOME NAV -->
+<!-- ======================================================================================= -->
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -34,7 +38,6 @@
             <ul class="nav navbar-nav navbar-right">
               <?php if (! static::$auth->check()): ?>
                 <li <?php if ($page === "auth.register"): ?> class="active" <?php endif; ?>><a href="./?page=register">Register</a></li>
-                <li <?php if ($page === "auth.login"): ?> class="active" <?php endif; ?>><a href="./?page=login">Login</a></li>
               <?php else: ?>
                 <li><a href="#"><?= static::$auth->user()->username; ?></a></li>
                 <li><a href="./?page=logout">Logout</a></li>
