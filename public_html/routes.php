@@ -2,6 +2,8 @@
 
 use App\Controllers\HomeController;
 use App\Controllers\DashController;
+use App\Controllers\PostsController;
+use App\Controllers\CommentsController;
 use App\Controllers\AuthenticationController;
 use App\Controllers\ErrorController;
 
@@ -61,6 +63,59 @@ try {
             $controller->index();
 
             break;
+
+// ---------------------------------------------
+
+        case "post";
+
+            $controller = new PostsController();
+            $controller->show();
+
+            break;
+
+        case "post.create";
+
+            $controller = new PostsController();
+            $controller->create();
+
+            break;
+
+        case "post.store";
+
+            $controller = new PostsController();
+            $controller->store();
+
+            break;
+
+        case "post.edit";
+
+            $controller = new PostsController();
+            $controller->edit();
+
+            break;
+
+        case "post.update";
+
+            $controller = new PostsController();
+            $controller->update();
+
+            break;
+
+        case "post.destroy";
+
+            $controller = new PostsController();
+            $controller->destroy();
+
+            break;
+
+        case "comment.create";
+
+            $controller = new CommentsController();
+            $controller->create();
+
+            break;
+
+// ---------------------------------------------
 
 // ---------------------------------------------
 

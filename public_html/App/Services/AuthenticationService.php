@@ -98,6 +98,37 @@ class AuthenticationService
        return static::$currentUser->role === $role;
    }
 
+//---------------------------------
+   public function isUser()
+   {
+        if (! static::$currentUser) {
+            return false;
+        }
+   }
+
+   public function mustBeUser()
+   {
+       if(! $this->isUser()) {
+        throw new InsufficientPrivilegesException();
+       }
+   }
+
+//---------------------------------
+   public function isOwner()
+   {
+        if (! static::$currentUser->id === static::$auth->user()->id) {
+            return false;
+        }
+   }
+
+   public function mustBeOwner()
+   {
+       if(! $this->isOwner()) {
+        throw new InsufficientPrivilegesException();
+       }
+   }
+
+//---------------------------------
    public function isAdmin()
    {
         if (! static::$currentUser) {

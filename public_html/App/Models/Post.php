@@ -7,7 +7,7 @@ use finfo;
 class Post extends DatabaseModel
 {
 
-    protected static $columns = ['id', 'user_id', 'title', 'content', 'created'];
+    protected static $columns = ['id', 'user_id', 'title', 'content', 'feature_img', 'created'];
 
     protected static $fakeColumns = ['tags'];
 
@@ -16,7 +16,7 @@ class Post extends DatabaseModel
     protected static $validationRules = [
     	'title' 	  => 'minlength:1',
         'user_id'     => 'numeric,exists:\App\Models\User',
-    	'year' 		  => 'minlength:140'
+    	'content' 		  => 'minlength:140'
     ];
 
     public function comments()

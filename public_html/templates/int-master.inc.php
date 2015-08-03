@@ -44,7 +44,7 @@
           <div class="col-sm-3 col-md-3">
               <form class="navbar-form" role="search">
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search" name="q">
+                  <input type="text" class="form-control" placeholder="Search" name="search">
                   <div class="input-group-btn">
                       <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                   </div>
@@ -52,7 +52,7 @@
               </form>
           </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><?= static::$auth->user()->username; ?></a></li>
+            <li><a href="./?page=dash"><?= static::$auth->user()->username; ?></a></li>
             <li><a href="./?page=post.create">New Post</a></li>
             <li><a href="./?page=logout">Logout</a></li>
           </ul>
