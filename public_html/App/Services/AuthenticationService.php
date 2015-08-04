@@ -119,9 +119,9 @@ class AuthenticationService
         return static::$currentUser->id === $owner_id;
    }
 
-   public function mustBeOwner()
+   public function mustBeOwner($owner_id)
    {
-       if(! $this->isOwner()) {
+       if(! $this->isOwner($owner_id)) {
         throw new InsufficientPrivilegesException();
        }
    }

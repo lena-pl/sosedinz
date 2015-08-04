@@ -19,7 +19,7 @@
      --><?php endforeach; ?>
       </ul>
 
-      <?php if (static::$auth->isUser()): ?>
+      <?php if (static::$auth->isOwner($post->user_id)): ?>
         <p>
           <a href="./?page=post.edit&amp;id=<?= $post->id ?>" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit post</a>
         </p>

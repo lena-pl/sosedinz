@@ -60,9 +60,9 @@ class PostsController extends Controller
 
     public function edit()
     {
-        static::$auth->mustBeOwner();
         $post = $this->getPostFormData($_GET['id']);
         $post->loadTags();
+        static::$auth->mustBeOwner($post->user_id);
 
         $view = new PostFormView(compact('post', 'tags'));
         $view->render();
@@ -70,11 +70,10 @@ class PostsController extends Controller
 
     public function update()
     {
-
-        static::$auth->mustBeOwner();
-
-        $post = new post($_POST['id']);
+        $post = new Post($_POST['id']);
         $post->processArray($_POST);
+
+        static::$auth->mustBeOwner($post->user_id);
 
         if (is_array($post->tags)) {
             $post->tags = implode($post->tags, ",");
@@ -102,11 +101,12 @@ class PostsController extends Controller
 
     public function destroy()
     {
-        static::$auth->mustBeOwner();
+        $post = new Post($_POST['id']);
+        static::$auth->mustBeOwner($post->user_id);
 
         post::destroy($_POST['id']);
 
-        header("Location: ./?page=posts");
+        header("Location: ./?page=dash");
     }
 
     private function getPostFormData($id = null)
