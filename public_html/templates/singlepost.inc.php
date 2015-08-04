@@ -35,7 +35,7 @@
                 <img src="<?= $comment->user()->gravatar(48, 'identicon') ?>" alt="">
               </div>
               <div class="media-body">
-                <h4 class="media-heading">#<?= $count ?> <?= $comment->user()->username ?></h4>
+                <h4 class="media-heading">#<?= $count ?> <a href="./?page=dash&amp;id=<?= $comment->user_id ?>"><?= $comment->user()->username ?></a></h4>
                 <p><?= $comment->comment ?></p>
               </div>
             </article>
