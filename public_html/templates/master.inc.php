@@ -32,9 +32,19 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li <?php if ($page === "index"): ?> class="active" <?php endif ?> ><a href="./">Home</a></li>
-              <li <?php if ($page === "browse"): ?> class="active" <?php endif ?> ><a href="./?page=browse">Search</a></li>
             </ul>
+            <div class="col-sm-3 col-md-3">
+                <form method="GET" action="./" class="navbar-form navbar-right" role="search">
+                  <div class="form-group input-group">
+                    <input type="hidden" name="page" value="search">
+                    <input name="q" type="search" class="form-control" placeholder="Search">
+                      <span class="input-group-btn"><button type="submit" class="btn btn-default" aria-label="Search">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </button>
+                    </span>
+                  </div>
+                </form>
+            </div>
             <ul class="nav navbar-nav navbar-right">
               <?php if (! static::$auth->check()): ?>
                 <li <?php if ($page === "auth.register"): ?> class="active" <?php endif; ?>><a href="./?page=register">Register</a></li>

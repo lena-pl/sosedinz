@@ -41,21 +41,25 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            </li>
           </ul>
-          <div class="col-sm-3 col-md-3">
-              <form method="GET" action="./" class="navbar-form navbar-right" role="search">
-                <div class="form-group input-group">
-                  <input type="hidden" name="page" value="search">
-                  <input name="q" type="search" class="form-control" placeholder="Search">
-                    <span class="input-group-btn"><button type="submit" class="btn btn-default" aria-label="Search">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </button>
-                  </span>
-                </div>
-              </form>
-          </div>
+              <div class="col-sm-3 col-md-3">
+                  <form method="GET" action="./" class="navbar-form navbar-right" role="search">
+                    <div class="form-group input-group">
+                      <input type="hidden" name="page" value="search">
+                      <input name="q" type="search" class="form-control" placeholder="Search">
+                        <span class="input-group-btn"><button type="submit" class="btn btn-default" aria-label="Search">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+              </div>
           <ul class="nav navbar-nav navbar-right">
+
+            <?php if (! static::$auth->check()): ?>
+              <li><a href="./">Login</a></li>
+              <li <?php if ($page === "auth.register"): ?> class="active" <?php endif; ?>><a href="./?page=register">Register</a></li>
+            <?php else: ?>
             <li><a href="./?page=post.create">New Post</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= static::$auth->user()->username; ?> <b class="caret"></b></a>
@@ -64,6 +68,8 @@
                 <li><a href="./?page=account.edit">Edit Account</a></li>
                 <li class="divider"></li>
                 <li><a href="./?page=logout">Logout</a></li>
+            <?php endif; ?>
+
               </ul>
             </li>
           </ul>
