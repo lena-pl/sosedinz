@@ -1,9 +1,12 @@
 <?php
 
 use App\Controllers\HomeController;
+use App\Controllers\SearchController;
+
 use App\Controllers\DashController;
 use App\Controllers\PostsController;
 use App\Controllers\CommentsController;
+
 use App\Controllers\AuthenticationController;
 use App\Controllers\ErrorController;
 
@@ -21,6 +24,12 @@ try {
 
             break;
 
+        case "search":
+            
+            $controller = new SearchController();
+            $controller->search();
+            
+            break;
 // ---------------------------------------------
         case "login":
 

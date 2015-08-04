@@ -162,4 +162,42 @@ class Post extends DatabaseModel
         $statement->execute();
     }
 
+    public static function search($searchquery)
+    {
+        $models = [];
+        $db = static::getDatabaseConnection();
+
+        $query = "SET @searchterm = :searchquery ;";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':searchquery', $searchquery);
+        $statement->execute();
+
+        $query = "SELECT
+                posts.id, title, content, taglist,
+                MATCH(title) AGAINST(@searchterm) * 2 AS score_title,
+                MATCH(content) AGAINST(@searchterm) AS score_description,
+                MATCH(taglist) AGAINST(@searchterm IN BOOLEAN MODE) * 1.5 AS score_tag
+            FROM posts
+            LEFT JOIN (
+                SELECT post_id, GROUP_CONCAT(tag SEPARATOR ', ') AS taglist FROM tags
+                RIGHT JOIN posts_tags ON posts_tags.tag_id = id
+                GROUP BY post_id
+            ) AS tags ON posts.id = post_id
+            WHERE
+                MATCH(title) AGAINST(@searchterm) OR
+                MATCH(content) AGAINST(@searchterm) OR
+                MATCH(taglist) AGAINST(@searchterm IN BOOLEAN MODE)
+            ORDER BY (score_title + score_description + score_tag) DESC";
+
+        $statement = $db->prepare($query);
+        $statement->execute();
+        while ($record = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $model = new Post();
+            $model->data = $record;
+            array_push($models, $model);
+        }
+
+        return $models;
+    }
+
 }

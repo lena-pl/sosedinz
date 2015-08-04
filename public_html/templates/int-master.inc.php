@@ -44,13 +44,15 @@
             </li>
           </ul>
           <div class="col-sm-3 col-md-3">
-              <form class="navbar-form" role="search">
-              <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search" name="search">
-                  <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                  </div>
-              </div>
+              <form method="GET" action="./" class="navbar-form navbar-right" role="search">
+                <div class="form-group input-group">
+                  <input type="hidden" name="page" value="search">
+                  <input name="q" type="search" class="form-control" placeholder="Search">
+                    <span class="input-group-btn"><button type="submit" class="btn btn-default" aria-label="Search">
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
               </form>
           </div>
           <ul class="nav navbar-nav navbar-right">
