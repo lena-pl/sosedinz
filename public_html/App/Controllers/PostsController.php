@@ -48,8 +48,8 @@ class PostsController extends Controller
             exit();
         }
 
-        if ($_FILES['feature']['error'] === UPLOAD_ERR_OK) {
-            $post->saveFeatureImage($_FILES['feature']['tmp_name']);
+        if ($_FILES['feature_img']['error'] === UPLOAD_ERR_OK) {
+            $post->saveFeatureImage($_FILES['feature_img']['tmp_name']);
         }
 
         $post->save();
@@ -86,8 +86,8 @@ class PostsController extends Controller
             exit();
         }
 
-        if ($_FILES['feature']['error'] === UPLOAD_ERR_OK) {
-            $post->saveFeatureImage($_FILES['feature']['tmp_name']);
+        if ($_FILES['feature_img']['error'] === UPLOAD_ERR_OK) {
+            $post->saveFeatureImage($_FILES['feature_img']['tmp_name']);
         } else if (isset($_POST['remove-image']) && $_POST['remove-image'] === "TRUE") {
             $post->feature = null;
         }

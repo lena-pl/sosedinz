@@ -3,7 +3,7 @@
 use App\Controllers\HomeController;
 use App\Controllers\SearchController;
 
-use App\Controllers\DashController;
+use App\Controllers\AccountController;
 use App\Controllers\PostsController;
 use App\Controllers\CommentsController;
 
@@ -68,8 +68,29 @@ try {
 // ---------------------------------------------
         case "dash":
 
-            $controller = new DashController();
+            $controller = new AccountController();
             $controller->show();
+
+            break;
+
+        case "account.edit":
+
+            $controller = new AccountController();
+            $controller->edit();
+
+            break;
+
+        case "account.update":
+
+            $controller = new AccountController();
+            $controller->update();
+
+            break;
+
+        case "account.destroy";
+
+            $controller = new AccountController();
+            $controller->destroy();
 
             break;
 

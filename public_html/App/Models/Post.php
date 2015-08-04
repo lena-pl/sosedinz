@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+
+use Intervention\Image\ImageManagerStatic as Image;
 use PDO;
 use finfo;
 
@@ -160,6 +162,53 @@ class Post extends DatabaseModel
         }
 
         $statement->execute();
+    }
+
+    public function saveFeatureImage($filename)
+    {
+        $finfo = new finfo(FILEINFO_MIME_TYPE);
+        $mime = $finfo->file($filename);
+
+        $extensions = [
+            'image/jpg'  => '.jpg',
+            'image/jpeg' => '.jpg',
+            'image/png'  => '.png',
+            'image/gif'  => '.gif'
+        ];
+
+        $extension = '.jpg';
+        if (isset($extensions[$mime])) {
+            $extension = $extensions[$mime];
+        }
+
+        $newFilename = uniqid() . $extension;
+
+        $folder = "./images/features/originals"; // no trailing slash
+
+        if (! is_dir($folder)) {
+            mkdir($folder, 0777, true);
+        }
+
+        $destination = $folder . "/" . $newFilename;
+
+        move_uploaded_file($filename, $destination);
+
+        $this->feature_img = $newFilename;
+
+        //240x300 80x100
+        if (! is_dir("./images/features/300h")) {
+            mkdir("./images/features/300h", 0777, true);
+        }
+        $img = Image::make($destination);
+        $img->fit(240, 300);
+        $img->save("./images/features/300h/" . $newFilename);
+
+        if (! is_dir("./images/features/100h")) {
+            mkdir("./images/features/100h", 0777, true);
+        }
+        $img = Image::make($destination);
+        $img->fit(80, 100);
+        $img->save("./images/features/100h/" . $newFilename);
     }
 
     public static function search($searchquery)

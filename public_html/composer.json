@@ -1,6 +1,7 @@
 {
     "require": {
-        "mailgun/mailgun-php": "^1.8"
+        "mailgun/mailgun-php": "^1.8",
+        "intervention/image": "^2.3"
     },
     "autoload": {
     	"psr-4": {"App\\": "App/"}
