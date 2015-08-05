@@ -1,6 +1,14 @@
      <div class="row">
         <div class="col-xs-12">
-          <h1>My Posts</h1>
+
+          <div>
+            <img src="<?= $user->gravatar(48, 'identicon') ?>" alt="">
+          </div>
+
+          <h4 class="media-heading"><?= $user->username; ?></h4>
+          <p class="lead"><?= $user->bio; ?></p>
+
+          <h3>My Posts</h3>
 
           <ul>
 

@@ -6,12 +6,18 @@
         <div class="col-xs-12">
 
 			<h1><?= $post->title ?></h1>
-      <h3>By: <a href="./?page=dash&amp;id=<?= $post->user_id ?>"><?= $post->user()->username ?></a></h3>
+
+      <article class="media">
+        <div class="media-left">
+          <img src="<?= $post->user()->gravatar(48, 'identicon') ?>" alt="">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">By: <a href="./?page=dash&amp;id=<?= $post->user_id ?>"><?= $post->user()->username ?></a></h4>
+        </div>
+      </article>
 
       <?php if($post->feature_img != ""): ?>
         <img src="./images/features/300h/<?= $post->feature_img ?>" alt="">
-      <?php else: ?>
-        <p><small>no feature image found</small></p>
       <?php endif; ?>
       <p><?= $post->content ?></p>
 
