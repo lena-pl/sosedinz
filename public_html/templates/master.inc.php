@@ -38,10 +38,11 @@
                   <div class="form-group input-group">
                     <input type="hidden" name="page" value="search">
                     <input name="q" type="search" class="form-control" placeholder="Search">
-                      <span class="input-group-btn"><button type="submit" class="btn btn-default" aria-label="Search">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </button>
-                    </span>
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" aria-label="Search">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                      </span>
                   </div>
                 </form>
             </div>
