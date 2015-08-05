@@ -138,10 +138,35 @@ try {
 
             break;
 
+// ---------------------------------------------
+
+// ---------------------------------------------
+
         case "comment.create";
 
             $controller = new CommentsController();
             $controller->create();
+
+            break;
+
+        case "comment.edit";
+
+            $controller = new CommentsController();
+            $controller->edit();
+
+            break;
+
+        case "comment.update";
+
+            $controller = new CommentsController();
+            $controller->update();
+
+            break;
+
+        case "comment.destroy";
+
+            $controller = new CommentsController();
+            $controller->destroy();
 
             break;
 

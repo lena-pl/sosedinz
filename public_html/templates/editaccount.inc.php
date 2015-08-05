@@ -6,6 +6,8 @@
           <form method="POST" action="./?page=account.update" class="form-horizontal">
             <h1>Edit Account</h1>
 
+            <h5>Your Email Address: <?= $user->email ?></h5>
+
             <div class="form-group form-group-lg<?php if ($errors['username']): ?> has-error <?php endif; ?>">
               <label for="username" class="col-sm-4 col-md-2 control-label">Username</label>
               <div class="col-sm-8 col-md-10">
@@ -13,16 +15,6 @@
                   placeholder="your_username"
                   value="<?= $user->username; ?>">
                 <div class="help-block"><?= $errors['username']; ?></div>
-              </div>
-            </div>
-
-            <div class="form-group form-group-lg<?php if ($errors['email']): ?> has-error <?php endif; ?>">
-              <label for="email" class="col-sm-4 col-md-2 control-label">Email Address</label>
-              <div class="col-sm-8 col-md-10">
-                <input id="email" class="form-control input-lg" name="email"
-                  placeholder="you@example.com"
-                  value="<?= $user->email; ?>">
-                <div class="help-block"><?= $errors['email']; ?></div>
               </div>
             </div>
 
@@ -36,7 +28,7 @@
               </div>
             </div>
 
-            <div class="form-group form-group-lg<?php if ($errors['password']): ?> has-error <?php endif; ?>">
+<!--             <div class="form-group form-group-lg<?php if ($errors['password']): ?> has-error <?php endif; ?>">
               <label for="password" class="col-sm-4 col-md-2 control-label">Password</label>
               <div class="col-sm-8 col-md-10">
                 <input id="password" class="form-control input-lg" name="password" type="password">
@@ -50,7 +42,7 @@
                 <input id="password2" class="form-control input-lg" name="password2" type="password">
                 <div class="help-block"><?= $errors['password2']; ?></div>
               </div>
-            </div>
+            </div> -->
 
             <div class="form-group form-group-lg<?php if ($errors['avatar']): ?> has-error <?php endif; ?>">
               <label for="avatar" class="col-sm-4 col-md-2 control-label">Avatar</label>

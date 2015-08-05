@@ -6,6 +6,8 @@
         <div class="col-xs-12">
 
 			<h1><?= $post->title ?></h1>
+      <h3>By: <a href="./?page=dash&amp;id=<?= $post->user_id ?>"><?= $post->user()->username ?></a></h3>
+
       <?php if($post->feature_img != ""): ?>
         <img src="./images/features/300h/<?= $post->feature_img ?>" alt="">
       <?php else: ?>
@@ -35,7 +37,22 @@
                 <img src="<?= $comment->user()->gravatar(48, 'identicon') ?>" alt="">
               </div>
               <div class="media-body">
+
                 <h4 class="media-heading">#<?= $count ?> <a href="./?page=dash&amp;id=<?= $comment->user_id ?>"><?= $comment->user()->username ?></a></h4>
+
+                <?php if (static::$auth->isOwner($comment->user_id)): ?>
+                  <form method="POST" action="./?page=comment.edit&id=<?= $comment->id ?>" class="form-horizontal">
+                    <div class="form-group">
+                      <div class="col-sm-10">
+                        <input type="hidden" name="id" value="<?= $comment->id ?>">
+                        <button class="btn btn-danger">
+                          Edit Comment
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                <?php endif; ?>
+
                 <p><?= $comment->comment ?></p>
               </div>
             </article>

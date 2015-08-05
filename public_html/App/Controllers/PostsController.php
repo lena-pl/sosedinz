@@ -104,10 +104,12 @@ class PostsController extends Controller
         $post = new Post($_POST['id']);
         static::$auth->mustBeOwner($post->user_id);
 
-        post::destroy($_POST['id']);
+        Post::destroy($_POST['id']);
 
         header("Location: ./?page=dash");
     }
+
+    // FORMS
 
     private function getPostFormData($id = null)
     {

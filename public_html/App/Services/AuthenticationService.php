@@ -116,7 +116,9 @@ class AuthenticationService
 //---------------------------------
    public function isOwner($owner_id)
    {
-        return static::$currentUser->id === $owner_id;
+        if(static::$currentUser->id === $owner_id || static::$currentUser->role === 'admin') {
+          return true;
+        }
    }
 
    public function mustBeOwner($owner_id)
