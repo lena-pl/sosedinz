@@ -8,6 +8,8 @@ use \App\Views\UserFormView;
 use \App\Models\Post;
 use \App\Models\User;
 
+use App\Models\Exceptions\ModelNotFoundException;
+
 class AccountController extends Controller
 {
 
@@ -18,9 +20,14 @@ class AccountController extends Controller
             header("Location: ./?page=home");
             exit();
         } 
+
         if (!isset($_GET['id']) || $_GET['id'] <= 0) {
             header("Location: ./?page=dash&id=" . static::$auth->user()->id);
             exit();
+        } 
+
+        if (!User::findBy("id", $_GET['id'])){
+            throw new ModelNotFoundException();
         }
 
         $p = isset($_GET['p']) ? (int)$_GET['p'] : 1;
