@@ -13,7 +13,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Main -->
+    <!-- Custom Stylesheet -->
     <link href="css/main.css" rel="stylesheet">
 
   </head>
@@ -34,11 +34,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="./">sosediNZ</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
             </ul>
+            <div class="col-sm-2"><a href="./"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></a></div>
             <div class="col-sm-3 col-md-3">
                 <form method="GET" action="./" class="navbar-form navbar-right" role="search">
                   <div class="form-group input-group">
@@ -74,7 +74,7 @@
       <?php $this->content (); ?>
 
       <footer>
-        <p>© <?php echo date("Y") ?> sosediNZ</p>
+        © <?php echo date("Y") ?> sosediNZ
       </footer>
 
     </div><!-- /.container -->

@@ -1,8 +1,16 @@
 @import 'clearfix';
 @import 'taggle';
+@import 'nav';
+@import 'home';
+
+.row {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
 
 footer {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-  margin-top: 10px;
+	background-color: #3e3f49;
+	color: #fff;
+    padding-bottom: 3em;
+    padding-top: 1.5em;
 }

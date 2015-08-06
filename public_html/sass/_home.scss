@@ -1,0 +1,112 @@
+#bg, #search-bg {
+  background-image: url('../images/moscow-river.jpg');
+  background-repeat: no-repeat;
+  background-width: 100%;
+}
+
+#bg {
+  background-position: center top;
+  padding: 5em 29em 5em 29em;
+}
+
+#search-container {
+  position: relative;
+}
+
+#search-bg {
+  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+
+  /* Pull the background 70px higher to the same place as #bg's */
+  background-position: center -70px;
+
+  -webkit-filter: blur(7px);
+  filter: url('/media/blur.svg#blur');
+  filter: blur(7px);
+}
+
+#search {
+  /* Put this on top of the blurred layer */
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+}
+
+@media (max-width: 600px ) {
+  #bg { padding: 10px; }
+  #search-bg { background-position: center -10px; }
+}
+
+// #login, #login-bg {
+// 	background-color: #76a7f8;
+// 	background-image: url("../images/moscow-river.jpg");
+// 	background-repeat: no-repeat;
+// 	background-width: 100%;
+
+// 	h1 {
+// 		padding-bottom: 0.5em;
+// 	}
+// }
+
+.login-form {
+	padding: 5em;
+}
+
+// #login-container {
+//   position: relative;
+// }
+
+// #login-bg {
+//   /* Absolutely position it, but stretch it to all four corners, then put it just behind #login-form's z-index */
+//   position: absolute;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   z-index: 99;
+
+//   -webkit-filter: blur(10px);
+//   filter: url('/media/blur.svg#blur');
+//   filter: blur(10px);
+// }
+
+// #login-form {
+//   /* Put this on top of the blurred layer */
+//   position: relative;
+//   z-index: 100;
+//   padding-top: 5em;
+//   padding-bottom: 5em;
+// }
+
+// @media (max-width: 600px ) {
+//   #login { padding: 10px; }
+//   #login-bg { background-position: center -10px; }
+// }
+
+.credit {
+	color: #fff;
+}
+
+// FEATURES
+
+#features {
+	padding: 2em;
+	padding-bottom: 3.5em;
+	background-color: #8aafca;
+	color: #fff;
+
+	h3 {
+		font-variant: small-caps;
+		font-size: 42px;
+	}
+}
+
+.hook {
+	padding-top: 2em;
+	padding-bottom: 3.5em;
+}
