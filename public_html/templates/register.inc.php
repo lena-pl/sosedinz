@@ -38,7 +38,7 @@
     <article class='glass up'>
       <div class="col-sm-offset-4 col-sm-4">
 
-        <form method="POST" action="./?page=auth.store" class="form-horizontal">
+        <form method="POST" action="./?page=auth.store" class="form-horizontal login-form">
           <h1 class="text-center"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></h1>
 
           <div class="form-group form-group-lg<?php if ($errors['email']): ?> has-error <?php endif; ?>">
@@ -82,6 +82,18 @@
             </div>
           </div>
 
+          <div class="form-group form-group-lg<?php if ($errors['avatar']): ?> has-error <?php endif; ?>">
+            <div>
+              <input id="avatar" class="form-control input-lg" name="avatar"
+                type="file">
+              <div class="help-block"><?= $errors['avatar']; ?></div>
+            </div>
+            <?php if($user->avatar != ""): ?>
+              <div class="col-sm-1 col-md-1">
+                <img src="./images/avatars/100h/<?= $user->avatar ?>" alt="">
+              </div>
+            <?php endif; ?>
+          </div>
 
           <div class="form-group">
             <div>
@@ -96,7 +108,7 @@
       </div> <!-- /col-sm-4 -->
     </article>
   </div> <!-- /container -->
-      
+
   <div class="hidden">
     <svg xmlns="http://www.w3.org/2000/svg"  version="1.1">
       <defs>
