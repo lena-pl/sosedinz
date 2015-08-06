@@ -2,92 +2,101 @@
     $errors = $user->errors;
     // error_reporting(E_ALL & ~E_NOTICE);
 ?>
-     <div class="row">
-        <div class="col-xs-12">
 
-        </div>
+<div id="login">
+
+<!--==================================== HOME NAV =======================================-->
+
+  <div class="int-nav">
+    <div class="container">
+
+      <div class="col-sm-3">
+        <form method="GET" action="./" class="navbar-form" role="search">
+          <div class="form-group input-group">
+            <input type="hidden" name="page" value="search">
+            <input name="q" type="search" class="form-control" placeholder="Search">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-default" aria-label="Search">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+              </span>
+          </div>
+        </form>
+      </div> <!-- /col-sm-3 -->
+
+      <div class="col-sm-2 pull-right">
+        <button class="btn btn-default">
+          <a href="./?page=register">Register</a>
+        </button>
       </div>
 
-      <div id="bg">
-
-<!-- ======================================================================================= -->
-              <!-- HOME NAV -->
-<!-- ======================================================================================= -->
-
-      <div class="int-nav">
-        <div class="container">
-          <div class="col-sm-3 col-md-3">
-            <form method="GET" action="./" class="navbar-form navbar-right" role="search">
-              <div class="form-group input-group">
-                <input type="hidden" name="page" value="search">
-                <input name="q" type="search" class="form-control" placeholder="Search">
-                  <span class="input-group-btn">
-                    <button type="submit" class="btn btn-default" aria-label="Search">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </button>
-                  </span>
-              </div>
-            </form>
-          </div>
-
-          <div class="col-sm-2 pull-right">
-            <button class="btn btn-default">
-              <a href="./?page=register">Register</a>
-            </button>
-          </div>
-        </div>
-      </div>
+    </div> <!-- /container -->
+  </div> <!-- /int-nav -->
 
 <!--==================================== LOGIN FORM =======================================-->
 
-  <div id="search-container">
-    <div id="search-bg"></div>
-    <div id="search">
-      <form method="POST" action="./?page=auth.attempt" class="form-horizontal login-form">
-        <h1 class="text-center"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></h1>
 
-          <?php if ($error): ?>
-            <div class="alert alert-warning" role="alert"><strong>Warning:</strong> No user with that email and password combination was found. Check spelling/capitalisation and try again.</div>
-          <?php endif; ?>
+    <div class="container">
+      <article class='glass up'>
+        <div class="col-sm-offset-4 col-sm-4">
+          <h1 class="text-center"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></h1>
+          <form method="POST" action="./?page=auth.attempt" class="form-horizontal login-form">
 
-          <div class="form-group form-group-lg<?php if ($errors['email']): ?> has-error <?php endif; ?>">
-            <div>
-              <input id="email" class="form-control input-lg" name="email"
-                placeholder="Email Address"
-                value="<?= $user->email; ?>">
-              <div class="help-block"><?= $errors['email']; ?></div>
+            <?php if ($error): ?>
+              <div class="alert alert-warning" role="alert"><strong>Warning:</strong> No user with that email and password combination was found. Check spelling/capitalisation and try again.</div>
+            <?php endif; ?>
+
+            <div class="form-group form-group-lg<?php if ($errors['email']): ?> has-error <?php endif; ?>">
+              <div>
+                <input id="email" class="form-control input-lg" name="email"
+                  placeholder="Email Address"
+                  value="<?= $user->email; ?>">
+                <div class="help-block"><?= $errors['email']; ?></div>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group form-group-lg<?php if ($errors['password']): ?> has-error <?php endif; ?>">
-            <div>
-              <input id="password" class="form-control input-lg" name="password" type="password" placeholder="Password">
-              <div class="help-block"><?= $errors['password']; ?></div>
+            <div class="form-group form-group-lg<?php if ($errors['password']): ?> has-error <?php endif; ?>">
+              <div>
+                <input id="password" class="form-control input-lg" name="password" type="password" placeholder="Password">
+                <div class="help-block"><?= $errors['password']; ?></div>
+              </div>
             </div>
-          </div>
 
 
-          <div class="form-group">
-            <div>
-              <button class="btn btn-block btn-success">
-                <span class="glyphicon glyphicon-ok"></span> Log in
-              </button>
+            <div class="form-group">
+              <div>
+                <button class="btn btn-block btn-success">
+                  <span class="glyphicon glyphicon-ok"></span> Log in
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
-      <div class="credit text-center">
-        Hotel Ukraina - Radisson Royal Hotel, Moscow
-      </div>
-    </div>
+
+          </form>
+        </div> <!-- /col-sm-4 -->
+      </article>
+    </div> <!-- /container -->
+
+  <div class="hidden">
+    <svg xmlns="http://www.w3.org/2000/svg"  version="1.1">
+      <defs>
+        <filter id="blur">
+          <feGaussianBlur stdDeviation="5"/>
+        </filter>
+      </defs>
+    </svg>
   </div>
 
+  <div class="container">
+    <p class="credit">Hotel Ukraina - Radisson Royal Hotel, Moscow</p>
+  </div>
 
-</div>
+</div> <!-- /login -->
 
 <!-- ============================================================================================= -->
 
 
     <div id="features">
+
       <div class="row">
         <div class="container">
           <div class="col-sm-6 col-sm-offset-3">
@@ -118,4 +127,5 @@
           </div>
         </div> <!-- /Container -->
       </div> <!-- /Row -->
-    </div>
+
+    </div> <!-- /features -->

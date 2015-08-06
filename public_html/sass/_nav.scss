@@ -1,6 +1,7 @@
 /* Internal Nav */
 .int-nav {
     padding: 1em;
+    padding-bottom: 3em;
 }
 
 #bg {
@@ -53,4 +54,8 @@
 .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
     background-color: #416db4;
+}
+
+.navbar-form {
+    padding: 0px;
 }

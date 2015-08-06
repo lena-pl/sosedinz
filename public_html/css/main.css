@@ -1,88 +1,242 @@
 /* line 245, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list { margin: 0; padding: 0; float: left; width: 100%; font-size: 1.2rem; }
+.taggle_list {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  font-size: 1.2rem; }
 
 /* line 250, ../../../sass/projects/taggle/taggle.scss */
-.taggle_input { border: none; outline: none; font-weight: 300; }
+.taggle_input {
+  border: none;
+  outline: none;
+  font-weight: 300; }
 
 /* line 257, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list li { float: left; display: inline-block; white-space: nowrap; font-weight: 500; margin-bottom: 5px; }
+.taggle_list li {
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 500;
+  margin-bottom: 5px; }
 
 /* line 265, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list .taggle { margin-right: 8px; background: #E2E1DF; padding: 5px 10px; border-radius: 3px; position: relative; cursor: pointer; -webkit-transition: all 0.3s; transition: all 0.3s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.taggle_list .taggle {
+  margin-right: 8px;
+  background: #E2E1DF;
+  padding: 5px 10px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
 /* line 283, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list .taggle_hot { background: #cac8c4; }
+.taggle_list .taggle_hot {
+  background: #cac8c4; }
 
 /* line 287, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list .taggle .close { position: absolute; top: 5px; right: 3px; text-decoration: none; padding-left: 2px; padding-top: 3px; line-height: 75%; color: #ccc; color: rgba(0, 0, 0, 0.2); padding-bottom: 4px; display: none; }
+.taggle_list .taggle .close {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  text-decoration: none;
+  padding-left: 2px;
+  padding-top: 3px;
+  line-height: 75%;
+  color: #ccc;
+  color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 4px;
+  display: none; }
 
 /* line 302, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list .taggle:hover { padding: 5px; padding-right: 15px; background: #ccc; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.taggle_list .taggle:hover {
+  padding: 5px;
+  padding-right: 15px;
+  background: #ccc;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
 
 /* line 309, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list .taggle:hover > .close { display: block; }
+.taggle_list .taggle:hover > .close {
+  display: block; }
 
 /* line 313, ../../../sass/projects/taggle/taggle.scss */
-.taggle_list .taggle .close:hover { color: #990033; }
+.taggle_list .taggle .close:hover {
+  color: #990033; }
 
 /* line 317, ../../../sass/projects/taggle/taggle.scss */
-.taggle_placeholder { position: absolute; color: #CCC; top: 12px; left: 28px; -webkit-transition: opacity, 0.25s; transition: opacity, 0.25s; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+.taggle_placeholder {
+  position: absolute;
+  color: #CCC;
+  top: 12px;
+  left: 28px;
+  -webkit-transition: opacity, 0.25s;
+  -moz-transition: opacity, 0.25s;
+  -o-transition: opacity, 0.25s;
+  transition: opacity, 0.25s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 
 /* line 328, ../../../sass/projects/taggle/taggle.scss */
-.taggle_input { padding: 8px; padding-left: 0; float: left; margin-top: -5px; background: none; width: 100%; max-width: 100%; }
+.taggle_input {
+  padding: 8px;
+  padding-left: 0;
+  float: left;
+  margin-top: -5px;
+  background: none;
+  width: 100%;
+  max-width: 100%; }
 
 /* line 338, ../../../sass/projects/taggle/taggle.scss */
-.taggle_sizer { padding: 0; margin: 0; position: absolute; top: -500px; z-index: -1; visibility: hidden; }
+.taggle_sizer {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -500px;
+  z-index: -1;
+  visibility: hidden; }
 
 /* Internal Nav */
-.int-nav { padding: 1em; }
+.int-nav {
+  padding: 1em;
+  padding-bottom: 3em; }
 
-#bg .int-nav { position: absolute; left: 0; top: 0; }
+#bg .int-nav {
+  position: absolute;
+  left: 0;
+  top: 0; }
 
 /* Bootstrap Nav */
-.navbar { margin-bottom: 0; }
+.navbar {
+  margin-bottom: 0; }
 
-.navbar-default { max-width: 100%; background-color: #416db4; border-color: transparent; }
+.navbar-default {
+  max-width: 100%;
+  background-color: #416db4;
+  border-color: transparent; }
 
-.navbar { border-radius: 0px; }
+.navbar {
+  border-radius: 0px; }
 
 /* title */
-.navbar-default .navbar-brand { color: #fff; }
+.navbar-default .navbar-brand {
+  color: #fff; }
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #fff; }
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fff; }
 
 /* link */
-.navbar-default .navbar-nav > li > a { color: #fff; }
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: #fff; }
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff; }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { color: #fff; background-color: #416db4; }
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #416db4; }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { color: #fff; background-color: #416db4; }
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #416db4; }
 
-#bg, #search-bg { background-image: url("../images/moscow-river.jpg"); background-repeat: no-repeat; background-width: 100%; }
+.navbar-form {
+  padding: 0px; }
 
-#bg { background-position: center top; padding: 5em 29em 5em 29em; }
+/*==============================================*/
+/*                  FROSTED FORM                */
+/*==============================================*/
+/* LAYOUT */
+#login, article, .glass::before {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
 
-#search-container { position: relative; }
+.glass {
+  position: relative; }
 
-#search-bg { /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */ position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 99; /* Pull the background 70px higher to the same place as #bg's */ background-position: center -70px; -webkit-filter: blur(7px); filter: url("/media/blur.svg#blur"); -webkit-filter: blur(7px); filter: blur(7px); }
+.glass::before {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  content: ' '; }
 
-#search { /* Put this on top of the blurred layer */ position: relative; z-index: 100; padding: 20px; }
+/* BACKGROUNDS */
+#login {
+  background-image: url("../images/moscow-river.jpg");
+  background-size: 100%;
+  color: #fff; }
 
-@media (max-width: 600px) { #bg { padding: 10px; }
-  #search-bg { background-position: center -10px; } }
-.login-form { padding: 5em; }
+.glass::before {
+  background-image: url("../images/moscow-river.jpg");
+  /* Prefix free isn't picking up this one */
+  -webkit-filter: url("#blur");
+  filter: url("#blur");
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background-size: 100%;
+  opacity: 1;
+  background-attachment: fixed; }
 
-.credit { color: #fff; }
+.glass {
+  background-color: rgba(255, 255, 255, 0); }
 
-#features { padding: 2em; padding-bottom: 3.5em; background-color: #8aafca; color: #fff; }
-#features h3 { font-variant: small-caps; font-size: 42px; }
+/* TRANSFORMATIONS */
+.glass.up, .glass.up::before {
+  transform: translateY(0);
+  transform: translateY(0) translateZ(0); }
 
-.hook { padding-top: 2em; padding-bottom: 3.5em; }
+.login-form {
+  padding: 1em; }
 
-.row { margin-left: 0px !important; margin-right: 0px !important; }
+.credit {
+  margin-top: 4em; }
 
-footer { background-color: #3e3f49; color: #fff; padding-bottom: 3em; padding-top: 1.5em; }
+/*==============================================*/
+/*                    FEATURES                  */
+/*==============================================*/
+#features {
+  padding: 2em;
+  padding-bottom: 3.5em;
+  background-color: #8aafca;
+  color: #fff; }
+  #features h3 {
+    font-variant: small-caps;
+    font-size: 42px; }
 
-/*# sourceMappingURL=main.css.map */
+.hook {
+  padding-top: 2em;
+  padding-bottom: 3.5em; }
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important; }
+
+.img-responsive {
+  display: inline; }
+
+footer {
+  background-color: #3e3f49;
+  color: #fff;
+  padding-bottom: 3em;
+  padding-top: 1.5em; }
