@@ -7,7 +7,7 @@
 
 <!--==================================== HOME NAV =======================================-->
 
-  <div class="int-nav">
+  <div class="ext-nav">
     <div class="container">
 
       <div class="col-sm-3">

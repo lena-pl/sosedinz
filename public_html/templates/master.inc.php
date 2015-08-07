@@ -18,20 +18,20 @@
 
       <?php $this->content (); ?>
 
-      <footer class="text-center">
-        <div class="col-sm-3">
-          © <?php echo date("Y") ?> sosediNZ
-        </div>
-        <div class="col-sm-3">
-          Community Rules
-        </div>
-        <div class="col-sm-3">
-          Site Map
-        </div>
-        <div class="col-sm-3">
-          Contact Us
-        </div>
-      </footer>
+  <footer class="text-center">
+    <div class="col-sm-3">
+      © <?php echo date("Y") ?> sosediNZ
+    </div>
+    <div class="col-sm-3">
+      Community Rules
+    </div>
+    <div class="col-sm-3">
+      Site Map
+    </div>
+    <div class="col-sm-3">
+      Contact Us
+    </div>
+  </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

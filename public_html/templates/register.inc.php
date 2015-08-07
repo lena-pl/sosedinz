@@ -5,7 +5,7 @@
 <div id="login">
 <!--==================================== HOME STYLE NAV =======================================-->
 
-  <div class="int-nav">
+  <div class="ext-nav">
     <div class="container">
 
       <div class="col-sm-3 col-md-3">
