@@ -1,0 +1,21 @@
+.bio {
+	.form-group-lg .form-control {
+		height: 10.55em;
+	}
+}
+
+.btn-register {
+	color: #fff;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em; 
+    background-color: #1bbc9b;
+    border-color: #1bbc9b;
+    border-radius: 0px;
+    text-transform: uppercase;
+
+    &:hover {
+    	color: #fff;
+    	background-color: #16967c;
+    	border-color: #16967c;
+    }
+}
