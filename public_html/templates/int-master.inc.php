@@ -18,7 +18,8 @@
 
   </head>
 
-  <body>
+  <body class="footer-safe">
+
     <div>
 
 <!-- ======================================================================================= -->
@@ -76,24 +77,24 @@
       </div> <!-- /container -->
     </nav>
 
-    <div class="container">
-
-      <?php $this->content (); ?>
-
-    </div><!-- /.container -->
+    <div class="int-content">
+      <div class="container">
+          <?php $this->content (); ?>
+      </div><!-- /.container -->
+    </div> <!-- /int-content -->
 
     <footer class="text-center">
       <div class="col-sm-3">
         © <?php echo date("Y") ?> sosediNZ
       </div>
       <div class="col-sm-3">
-        Community Rules
+        <a href="./page=community">Community Rules</a>
       </div>
       <div class="col-sm-3">
-        Site Map
+        <a href="./page=site.map">Site Map</a>
       </div>
       <div class="col-sm-3">
-        Contact Us
+        <a href="./page=contact">Contact Us</a>
       </div>
     </footer>
 
@@ -106,6 +107,7 @@
     <script src="js/taggle-ie9.min.js"></script>
     <!-- Our hand-written JS -->
     <script src="js/main.js"></script>
+
 
   </body>
 

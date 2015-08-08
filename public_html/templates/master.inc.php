@@ -14,7 +14,7 @@
 
   </head>
 
-  <body>
+  <body class="footer-safe">
 
       <?php $this->content (); ?>
 
@@ -23,20 +23,21 @@
       © <?php echo date("Y") ?> sosediNZ
     </div>
     <div class="col-sm-3">
-      Community Rules
+      <a href="./page=community">Community Rules</a>
     </div>
     <div class="col-sm-3">
-      Site Map
+      <a href="./page=site.map">Site Map</a>
     </div>
     <div class="col-sm-3">
-      Contact Us
+      <a href="./page=contact">Contact Us</a>
     </div>
   </footer>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
