@@ -31,7 +31,7 @@ class AccountController extends Controller
         }
 
         $p = isset($_GET['p']) ? (int)$_GET['p'] : 1;
-        $pageSize = 25;
+        $pageSize = 6;
         $posts = Post::allBy("user_id", $_GET['id'], "title", true, $pageSize, $p);
 
         $user = User::findBy("id", $_GET['id']);

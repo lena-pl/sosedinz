@@ -27,5 +27,7 @@
 
     <?php endif; ?>
 
+    <?php $this->paginate("./?page=search", $p, $recordCount, $pageSize, 5); ?>
+
   </div>
 </div>

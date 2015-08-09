@@ -3,6 +3,7 @@
 @import 'nav';
 @import 'home';
 @import 'register';
+@import 'dash';
 
 .row {
 	margin-left: 0px !important;
@@ -14,8 +15,7 @@
 }
 
 .int-content {
-	background-color: #fff;
-	padding-top: 2em;
+	background-color: #e9e9e9;
 	padding-bottom: 2em;
 }
 

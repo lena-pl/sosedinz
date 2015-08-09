@@ -78,9 +78,7 @@
     </nav>
 
     <div class="int-content">
-      <div class="container">
           <?php $this->content (); ?>
-      </div><!-- /.container -->
     </div> <!-- /int-content -->
 
     <footer class="text-center">
