@@ -59,9 +59,9 @@
                 <li><a href="./">Login</a></li>
                 <li <?php if ($page === "auth.register"): ?> class="active" <?php endif; ?>><a href="./?page=register">Register</a></li>
               <?php else: ?>
-              <li class="nav-item"><a href="./?page=post.create">New Post</a></li>
+              <li class="nav-item"><a href="./?page=post.create"><span class="glyphicon glyphicon-plus"></span> New Post</a></li>
               <li class="dropdown nav-item">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= static::$auth->user()->username; ?> <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?= static::$auth->user()->username; ?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="./?page=home">Dashboard</a></li>
                   <li><a href="./?page=account.edit">Edit Account</a></li>

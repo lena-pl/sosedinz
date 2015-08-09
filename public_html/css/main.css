@@ -161,20 +161,26 @@
   .int-nav a:hover {
     text-decoration: none; }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2); }
+
 .int-btn-search {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
-  border-color: transparent; }
+  border-color: transparent;
+  margin-top: 5px; }
 
 .int-search {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
-  border-color: transparent; }
+  border-color: transparent;
+  margin-top: 5px; }
   .int-search:focus {
     border-color: transparent; }
 
 .nav-item {
-  background-color: rgba(255, 255, 255, 0.2); }
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 3px; }
   .nav-item:hover {
     background-color: rgba(255, 255, 255, 0.1); }
 
@@ -190,8 +196,20 @@
   background-color: #3e3f49;
   border-color: transparent; }
 
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff; }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1); } }
 .navbar {
   border-radius: 0px; }
+
+.navbar-default .navbar-toggle {
+  border-color: #fff; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff; }
 
 /* title */
 .navbar-default .navbar-brand {
@@ -220,6 +238,12 @@
 .navbar-default .navbar-nav > .open > a:focus {
   color: #fff;
   background-color: #3e3f49; }
+
+.navbar-right {
+  margin-top: 3px; }
+
+.navbar-right > li > a {
+  padding: 8px; }
 
 .navbar-form {
   padding: 0px; }
