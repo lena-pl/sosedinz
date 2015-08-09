@@ -2,7 +2,7 @@
   <div class="container">
 
     <div>
-      <img src="<?= $user->gravatar(48, 'identicon') ?>" alt="">
+      <img src="<?= $user->gravatar(120, 'identicon') ?>" alt="Gravatar" class="dash-photo">
     </div>
 
     <div>
@@ -13,7 +13,7 @@
 </div><!-- /.user-info -->
 
 <div class="container">
-  <h3 class="text-center">
+  <h3 class="text-center dash-heading">
     <?php if (static::$auth->user()->id === $user->id): ?>
       My posts
     <?php else: ?>
@@ -24,24 +24,26 @@
     <?php if (count($posts) > 0): ?>
       <?php foreach ($posts as $post ): ?>
         <?= $post->loadTags() ?>
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
 
           <div class="post-preview">
             <h4 class="text-center post-title"><a href="./?page=post&amp;id=<?= $post->id ?>">
             <?= $post->title ?></a></h4>
             <div><?= substr("$post->content", 0, 388) ?><a href="./?page=post&amp;id=<?= $post->id ?>"><span>…</span></a></div>
 
-            <div class="tags"><?= $post->tags ?></div>
+            <div class="extra">
+              <div class="tags"><?= $post->tags ?></div>
 
-            <div>
-              <a href="./?page=post&amp;id=<?= $post->id ?>#comments"><?= count($post->comments()) ?> 
-                <?php if (count($post->comments()) === 1): ?> 
-                  comment
-                <?php else: ?>
-                  comments
-                <?php endif; ?>
-              </a>
-            </div>
+              <div>
+                <a href="./?page=post&amp;id=<?= $post->id ?>#comments"><?= count($post->comments()) ?> 
+                  <?php if (count($post->comments()) === 1): ?> 
+                    comment
+                  <?php else: ?>
+                    comments
+                  <?php endif; ?>
+                </a>
+              </div>
+            </div> <!-- /.extra -->
            
           </div> <!-- /.post-preview -->
 
@@ -52,7 +54,7 @@
     <?php endif; ?>
 
 
-    <div class="col-sm-12 text-center">
+    <div class="col-xs-12 text-center pagination">
       <?php $this->paginate("./?page=dash&id=" . $user->id, $p, $recordCount, $pageSize); ?>
     </div>
 
