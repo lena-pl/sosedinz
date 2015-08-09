@@ -1,44 +1,59 @@
-          <div class="user-info text-center">
-            <div class="container">
-              <div>
-                <img src="<?= $user->gravatar(48, 'identicon') ?>" alt="">
-              </div>
+<div class="user-info text-center">
+  <div class="container">
 
-              <div>
-                <h4 class="media-heading"><?= $user->username; ?></h4>
-                <p class="lead"><?= $user->bio; ?></p>
-              </div>
-            </div><!-- /.container -->
-          </div><!-- /.user-info -->
+    <div>
+      <img src="<?= $user->gravatar(48, 'identicon') ?>" alt="">
+    </div>
 
-          <div class="container">
-            <h3 class="text-center">
-              <?php if (static::$auth->user()->id === $user->id): ?>
-                My posts
-              <?php else: ?>
-                <?= $user->username ?>'s posts
-              <?php endif; ?>
-            </h3>
+    <div>
+      <h4 class="media-heading"><?= $user->username; ?></h4>
+      <p class="lead"><?= $user->bio; ?></p>
+    </div>
+  </div><!-- /.container -->
+</div><!-- /.user-info -->
 
-              <?php if (count($posts) > 0): ?>
+<div class="container">
+  <h3 class="text-center">
+    <?php if (static::$auth->user()->id === $user->id): ?>
+      My posts
+    <?php else: ?>
+      <?= $user->username ?>'s posts
+    <?php endif; ?>
+  </h3>
 
-                <?php foreach ($posts as $post): ?>
-                  <div class="col-md-4">
-                    <div class="post-preview">
-                      <h4 class="text-center"><a href="./?page=post&amp;id=<?= $post->id ?>">
-                      <?= $post->title ?></a></h4>
-                      <div><?= $post->content ?></div>
-                    </div>
-                  </div>
-                <?php endforeach; ?>
+    <?php if (count($posts) > 0): ?>
+      <?php foreach ($posts as $post ): ?>
+        <?= $post->loadTags() ?>
+        <div class="col-md-4">
 
-              <?php else: ?>
+          <div class="post-preview">
+            <h4 class="text-center post-title"><a href="./?page=post&amp;id=<?= $post->id ?>">
+            <?= $post->title ?></a></h4>
+            <div><?= substr("$post->content", 0, 388) ?><a href="./?page=post&amp;id=<?= $post->id ?>"><span>…</span></a></div>
 
-                <p>No posts found. Sorry.</p>
+            <div class="tags"><?= $post->tags ?></div>
 
-              <?php endif; ?>
-
-            <div class="col-sm-12">
-              <?php $this->paginate("./?page=posts", $p, $recordCount, $pageSize, 5); ?>
+            <div>
+              <a href="./?page=post&amp;id=<?= $post->id ?>#comments"><?= count($post->comments()) ?> 
+                <?php if (count($post->comments()) === 1): ?> 
+                  comment
+                <?php else: ?>
+                  comments
+                <?php endif; ?>
+              </a>
             </div>
-          </div><!-- /.container -->
+           
+          </div> <!-- /.post-preview -->
+
+        </div> <!-- /.col-md-4 -->
+      <?php endforeach; ?>
+    <?php else: ?>
+      <p>No posts found. Sorry.</p>
+    <?php endif; ?>
+
+
+    <div class="col-sm-12 text-center">
+      <?php $this->paginate("./?page=dash&id=" . $user->id, $p, $recordCount, $pageSize); ?>
+    </div>
+
+</div><!-- /.container -->
