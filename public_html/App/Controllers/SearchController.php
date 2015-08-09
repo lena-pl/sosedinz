@@ -22,7 +22,7 @@ class SearchController extends Controller
 
         $posts = Post::search($q);
 
-        $view = new SearchResultsView(compact('posts', 'pageSize', 'p', 'recordCount'));
+        $view = new SearchResultsView(compact('posts', 'pageSize', 'p', 'recordCount', 'q'));
         $view->render();
     }
 }

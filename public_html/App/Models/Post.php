@@ -61,7 +61,7 @@ class Post extends DatabaseModel
         foreach ($tags as $tag) {
             array_push($taglist, $tag->tag);
         }
-        $this->tags = implode($taglist, ",");
+        $this->tags = implode($taglist, ", ");
     }
 
     public function saveTags()
@@ -228,7 +228,8 @@ class Post extends DatabaseModel
                 MATCH(taglist) AGAINST(@searchterm IN BOOLEAN MODE) * 1.5 AS score_tag
             FROM posts
             LEFT JOIN (
-                SELECT post_id, GROUP_CONCAT(tag SEPARATOR ', ') AS taglist FROM tags
+                SELECT post_id, GROUP_CONCAT(tag SEPARATOR ', ') AS taglist 
+                FROM tags
                 RIGHT JOIN posts_tags ON posts_tags.tag_id = id
                 GROUP BY post_id
             ) AS tags ON posts.id = post_id
