@@ -1,8 +1,9 @@
 <?php
     $errors = $user->errors;
 ?>
-      <div class="row">
-        <div class="col-xs-12">
+      <div class="container">
+        <div class="post">
+        
           <form method="POST" action="./?page=account.update" class="form-horizontal">
             <h1>Edit Account</h1>
 
@@ -89,5 +90,5 @@
             </div>
           </form>
 
-        </div>
-      </div>
+  </div> <!-- /.post-preview -->
+</div> <!-- /.container -->

@@ -1,14 +1,13 @@
-     <div class="row">
-        <div class="col-xs-12">
+<div class="container">
+  <div class="post">
 
-        <ol class="breadcrumb">
-          <li><a href="./">Home</a></li>
-          <li class="active">Not Found</li>
-        </ol>
-      </div>
-    </div>
+    <ol class="breadcrumb">
+      <li><a href="./">Home</a></li>
+      <li class="active">Not Found</li>
+    </ol>
 
     <div class="jumbotron">
+
       <div class="row">
         <div class="col-xs-12 text-center">
           <h1>Error 404</h1>
@@ -20,4 +19,8 @@
           <p class="lead">Can't find a page with that URL. Go back and try again.</p>
         </div>
       </div>
-    </div>
+
+    </div> <!-- /.jumbotron -->
+
+  </div> <!-- /.post-preview -->
+</div> <!-- /.container -->

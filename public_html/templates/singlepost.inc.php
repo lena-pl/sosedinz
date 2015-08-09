@@ -2,8 +2,8 @@
        $errors = $newcomment->errors;
      ?>
 
-     <div class="row">
-        <div class="col-xs-12">
+     <div class="container">
+      <div class="post">
 
 			<h1><?= $post->title ?></h1>
 
@@ -33,7 +33,7 @@
         </p>
       <?php endif; ?>
 
-      <h2>Comments</h2>
+      <h2 id="comments">Comments</h2>
         <?php if (count($comments) > 0): ?>
           <?php $count = 0; ?>
           <?php foreach($comments as $comment): ?>
@@ -92,5 +92,5 @@
           <p>You need to be <a href="./?page=login">logged in</a> to add a comment.</p>
         <?php endif; ?>
 
-      </div>
-    </div>
+      </div> <!-- /.post-preview -->
+    </div> <!-- /.container -->

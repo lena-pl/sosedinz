@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-xs-12">
+<div class="container">
+  <div class="post">
 
     <h1>Search Results:</h1>
 
@@ -27,7 +27,5 @@
 
     <?php endif; ?>
 
-    <?php $this->paginate("./?page=search", $p, $recordCount, $pageSize, 5); ?>
-
-  </div>
-</div>
+  </div> <!-- /.post-preview -->
+</div> <!-- /.container -->
