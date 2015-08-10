@@ -32,7 +32,13 @@
             <div><?= substr("$post->content", 0, 388) ?><a href="./?page=post&amp;id=<?= $post->id ?>"><span>…</span></a></div>
 
             <div class="extra">
-              <div class="tags"><?= $post->tags ?></div>
+              <div class="tags">
+                <?php if ($post->tags == ""): ?> 
+                  no tags to display
+                <?php else: ?>
+                  <?= $post->tags ?>
+                <?php endif; ?>
+              </div>
 
               <div>
                 <a href="./?page=post&amp;id=<?= $post->id ?>#comments"><?= count($post->comments()) ?> 

@@ -4,11 +4,18 @@
 @import 'home';
 @import 'register';
 @import 'dash';
+@import 'post';
 
 a {
     &:hover {
         text-decoration: none;
     }
+}
+
+h2 {
+    font-size: 42px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
 }
 
 .row {
@@ -22,12 +29,6 @@ a {
 
 .int-content {
 	background-color: #e9e9e9;
-}
-
-.post {
-    background-color: #fff;
-    padding: 1em;
-    min-height: 100%;
 }
 
 .footer-safe {
