@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\User;
 use App\Models\Post;
 use App\Models\Comment;
 use \App\Views\SinglePostView;
@@ -12,13 +13,14 @@ class PostsController extends Controller
 
     public function show()
     {
-    	$post      = new Post((int)$_GET['id']);
+        $post       = new Post((int)$_GET['id']);
+        $user       = $post->user();
         $newcomment = $this->getCommentFormData();
 
         $comments = $post->comments();
         $tags     = $post->getTags();
 
-    	$view = new SinglePostView(compact('post','comments','newcomment', 'tags'));
+    	$view = new SinglePostView(compact('post', 'user', 'comments','newcomment', 'tags'));
     	$view->render();
     }
 
