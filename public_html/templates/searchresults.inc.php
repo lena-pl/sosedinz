@@ -45,7 +45,7 @@
         </div> <!-- /.col-md-4 -->
       <?php endforeach; ?>
     <?php else: ?>
-      <p>That search didn't return any posts. Try again!</p>
+      <p class="text-center lead no-results">That search didn't return any posts. Try again!</p>
     <?php endif; ?>
 
   </div> <!-- /.container -->

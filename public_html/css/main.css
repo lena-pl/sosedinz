@@ -175,6 +175,8 @@
 
 .search-results { padding-bottom: 2em; }
 
+.no-results { padding-top: 2em; }
+
 a:hover { text-decoration: none; }
 
 h2 { font-size: 42px; padding-top: 0.6em; padding-bottom: 0.6em; }
