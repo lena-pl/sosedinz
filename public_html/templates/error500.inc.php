@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="post">
+<div class="post">
+  <div class="container">
 
     <ol class="breadcrumb">
       <li><a href="./">Home</a></li>
@@ -37,5 +37,5 @@
       </div> <!-- /.col-sm-12 text-center -->
 
     </div> <!-- /jumbotron -->
-  </div> <!-- /.post-preview -->
-</div> <!-- /.container -->
+  </div> <!-- /.container -->
+</div> <!-- /.post-preview -->

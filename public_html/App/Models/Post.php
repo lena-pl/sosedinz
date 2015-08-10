@@ -195,12 +195,12 @@ class Post extends DatabaseModel
 
         $this->feature_img = $newFilename;
 
-        //240x300 80x100
+        //715x315 80x100
         if (! is_dir("./images/features/300h")) {
             mkdir("./images/features/300h", 0777, true);
         }
         $img = Image::make($destination);
-        $img->fit(240, 300);
+        $img->fit(715, 315);
         $img->save("./images/features/300h/" . $newFilename);
 
         if (! is_dir("./images/features/100h")) {

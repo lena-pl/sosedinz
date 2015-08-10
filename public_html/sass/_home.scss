@@ -84,6 +84,15 @@
     }
 }
 
+.password-prompt {
+  a {
+    color: #fff;
+    &:hover {
+      color: #3e3f49;
+    }
+  }
+}
+
 .credit {
   margin-top: 4em;
 }

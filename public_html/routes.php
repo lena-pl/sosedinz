@@ -3,6 +3,8 @@
 use App\Controllers\HomeController;
 use App\Controllers\SearchController;
 
+use App\Controllers\ContactController;
+
 use App\Controllers\AccountController;
 use App\Controllers\PostsController;
 use App\Controllers\CommentsController;
@@ -30,6 +32,22 @@ try {
             $controller->search();
             
             break;
+
+// ---------------------------------------------
+        case "contact":
+            
+            $controller = new ContactController();
+            $controller->show();
+            
+            break;
+
+        case "send.message":
+            
+            $controller = new ContactController();
+            $controller->send();
+            
+            break;
+
 // ---------------------------------------------
         case "login":
 
@@ -65,6 +83,7 @@ try {
             $controller->logout();
 
         break;
+
 // ---------------------------------------------
         case "dash":
 

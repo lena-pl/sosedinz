@@ -5,8 +5,8 @@
   }
 ?>
 
-<div class="container">
-  <div class="post">
+<div class="post">
+  <div class="container">
 
     <form method="POST" action="<?= $submitAction ?>" class="form-horizontal" enctype="multipart/form-data">
     <?php if($comment->id): ?>
@@ -45,5 +45,5 @@
       </form>
     <?php endif; ?>
     
-  </div> <!-- /.post-preview -->
-</div> <!-- /.container -->
+  </div> <!-- /.container -->
+</div> <!-- /.post-preview -->

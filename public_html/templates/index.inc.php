@@ -73,6 +73,8 @@
               </div>
             </div>
 
+            <p class="text-center password-prompt"><a href="./?page=contact">Forgot password?</a></p>
+
           </form>
         </div> <!-- /col-sm-4 -->
       </article>

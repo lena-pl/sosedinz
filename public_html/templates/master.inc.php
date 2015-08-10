@@ -23,13 +23,13 @@
       © <?php echo date("Y") ?> sosediNZ
     </div>
     <div class="col-sm-3">
-      <a href="./page=community">Community Rules</a>
+      <a href="./?page=community">Community Rules</a>
     </div>
     <div class="col-sm-3">
-      <a href="./page=site.map">Site Map</a>
+      <a href="./?page=site.map">Site Map</a>
     </div>
     <div class="col-sm-3">
-      <a href="./page=contact">Contact Us</a>
+      <a href="./?page=contact">Contact Us</a>
     </div>
   </footer>
 
