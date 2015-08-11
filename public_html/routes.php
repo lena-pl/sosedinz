@@ -4,6 +4,7 @@ use App\Controllers\HomeController;
 use App\Controllers\SearchController;
 
 use App\Controllers\ContactController;
+use App\Controllers\FooterController;
 
 use App\Controllers\AccountController;
 use App\Controllers\PostsController;
@@ -45,6 +46,21 @@ try {
             
             $controller = new ContactController();
             $controller->send();
+            
+            break;
+
+// ---------------------------------------------
+        case "community":
+            
+            $controller = new FooterController();
+            $controller->rules();
+            
+            break;
+
+        case "site.map":
+            
+            $controller = new FooterController();
+            $controller->map();
             
             break;
 
@@ -156,8 +172,6 @@ try {
             $controller->destroy();
 
             break;
-
-// ---------------------------------------------
 
 // ---------------------------------------------
 

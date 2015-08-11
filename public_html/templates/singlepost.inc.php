@@ -39,11 +39,13 @@
          --><?php endforeach; ?>
           </ul>
 
+        <?php if (static::$auth->check()): ?>
           <?php if (static::$auth->isOwner($post->user_id)): ?>
             <p>
               <a href="./?page=post.edit&amp;id=<?= $post->id ?>" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit post</a>
             </p>
           <?php endif; ?>
+        <?php endif; ?>
         </div>
       </div>
 
@@ -59,8 +61,9 @@
                 </div>
                 <div class="media-body">
 
-                  <h4 class="media-heading">#<?= $count ?> <a href="./?page=dash&amp;id=<?= $comment->user_id ?>"><?= $comment->user()->username ?></a></h4>
+                  <h4 class="media-heading"><a href="./?page=dash&amp;id=<?= $comment->user_id ?>"><?= $comment->user()->username ?></a></h4>
 
+                <?php if (static::$auth->check()): ?>
                   <?php if (static::$auth->isOwner($comment->user_id)): ?>
                     <form method="POST" action="./?page=comment.edit&id=<?= $comment->id ?>" class="form-horizontal">
                       <div class="form-group">
@@ -73,6 +76,7 @@
                       </div>
                     </form>
                   <?php endif; ?>
+                <?php endif; ?>
 
                   <p><?= $comment->comment ?></p>
                 </div>

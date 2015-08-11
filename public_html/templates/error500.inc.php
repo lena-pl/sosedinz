@@ -38,4 +38,4 @@
 
     </div> <!-- /jumbotron -->
   </div> <!-- /.container -->
-</div> <!-- /.post-preview -->
+</div> <!-- /.post -->

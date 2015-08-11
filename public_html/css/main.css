@@ -461,6 +461,24 @@ h2 {
   .email-success-container p {
     margin-top: 7em; }
 
+.sitemap {
+  padding-top: 2em;
+  font-size: 18px;
+  padding-top: 2em;
+  padding-bottom: 3em; }
+  .sitemap ul {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+  .sitemap li {
+    padding-bottom: 0.5em; }
+  .sitemap a {
+    color: #333; }
+    .sitemap a:hover {
+      text-decoration: underline; }
+  .sitemap .no-padding {
+    padding-top: 0.7em;
+    padding-bottom: 0; }
+
 .footer-safe {
   background-color: #3e3f49; }
 

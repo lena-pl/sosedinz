@@ -43,6 +43,34 @@ h2 {
     }
 }
 
+.sitemap {
+    padding-top: 2em;
+    font-size: 18px;
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    ul {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    li {
+        padding-bottom: 0.5em;
+    }
+
+    a {
+        color: #333;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .no-padding {
+        padding-top: 0.7em;
+        padding-bottom: 0;
+    }
+}
+
 .footer-safe {
     background-color: #3e3f49;
 }
