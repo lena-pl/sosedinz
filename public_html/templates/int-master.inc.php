@@ -68,7 +68,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?= static::$auth->user()->username; ?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="./?page=dash">Dashboard</a></li>
-                  <li><a href="./?page=account.edit">Edit Account</a></li>
+                  <li><a href="./?page=account.edit">Delete Account</a></li>
                   <li class="divider"></li>
                   <li><a href="./?page=logout">Logout</a></li>
                 </ul>

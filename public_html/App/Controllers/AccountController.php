@@ -42,11 +42,6 @@ class AccountController extends Controller
     {
         $user = $this->getUserFormData(static::$auth->user()->id);
 
-        if (!isset($_GET['id']) || $_GET['id'] <= 0) {
-            header("Location: ./?page=account.edit&id=" . static::$auth->user()->id);
-            exit();
-        } 
-
         $error = isset($_GET['error']) ? $_GET['error'] : null;
 
         $view = new UserFormView(compact('user', 'error'));
@@ -66,7 +61,7 @@ class AccountController extends Controller
         if (! $user->isValid()) {
             $_SESSION['user.form'] = $user;
 
-            header("Location: ./?page=account.edit&id=" . $_POST['id']);
+            header("Location: ./?page=account.edit");
             exit();
         }
 
@@ -95,7 +90,6 @@ class AccountController extends Controller
 
      public function destroy()
     {
-        static::$auth->mustBeOwner($_POST['id']);
         User::destroy($_POST['id']);
 
         header("Location: ./");

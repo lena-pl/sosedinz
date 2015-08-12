@@ -60,7 +60,7 @@
         </div> <!-- /.col-md-4 -->
       <?php endforeach; ?>
     <?php else: ?>
-      <p>No posts found. Sorry.</p>
+      <p class="text-center">No posts found. Sorry.</p>
     <?php endif; ?>
 
 
