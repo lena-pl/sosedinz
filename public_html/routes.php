@@ -2,6 +2,7 @@
 
 use App\Controllers\HomeController;
 use App\Controllers\SearchController;
+use App\Controllers\BrowseController;
 
 use App\Controllers\ContactController;
 use App\Controllers\FooterController;
@@ -31,6 +32,13 @@ try {
             
             $controller = new SearchController();
             $controller->search();
+            
+            break;
+
+        case "browse":
+            
+            $controller = new BrowseController();
+            $controller->browse();
             
             break;
 

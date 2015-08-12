@@ -39,7 +39,11 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
             </ul>
-            <div class="col-sm-2 hidden-sm logo"><a href="./"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></a></div>
+            <?php if ( static::$auth->check()): ?>     
+              <div class="col-sm-2 hidden-sm logo"><a href="./?page=browse"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></a></div>
+            <?php else: ?>
+              <div class="col-sm-2 hidden-sm logo"><a href="./"><img src="./images/sosedinz-logo.png" alt="sosediNZ" class="img-responsive"></a></div>
+            <?php endif; ?>
             <div class="col-sm-3 col-md-3">
                 <form method="GET" action="./" class="navbar-form navbar-right" role="search">
                   <div class="form-group input-group">
@@ -63,7 +67,7 @@
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?= static::$auth->user()->username; ?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="./?page=home">Dashboard</a></li>
+                  <li><a href="./?page=dash">Dashboard</a></li>
                   <li><a href="./?page=account.edit">Edit Account</a></li>
                   <li class="divider"></li>
                   <li><a href="./?page=logout">Logout</a></li>

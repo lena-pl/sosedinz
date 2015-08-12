@@ -19,7 +19,7 @@ class HomeController extends Controller
 
         if (static::$auth->check()):
             //do this if user is logged in
-            header("Location: ./?page=dash");
+            header("Location: ./?page=browse");
             exit();
         else:
             $view->render();

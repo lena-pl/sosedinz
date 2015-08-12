@@ -22,6 +22,14 @@
         </form>
       </div>
 
+      <div class="col-xs-12 col-sm-3 col-lg-2">
+        <a href="./?page=browse">
+          <button class="btn btn-browse btn-block">
+            Browse all posts
+          </button>
+        </a>
+      </div>
+
       <div class="col-xs-12 col-sm-2 pull-right">
         <a href="./">
           <button class="btn btn-nav btn-block">

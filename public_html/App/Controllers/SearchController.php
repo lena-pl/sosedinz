@@ -15,6 +15,10 @@ class SearchController extends Controller
             $q = $_GET['q'];
         }
 
+        if ( $q === "" ) {
+            header("Location: ./?page=browse");
+        }
+
         $p = isset($_GET['p']) ? (int)$_GET['p'] : 1;
         $pageSize = 5;
 
