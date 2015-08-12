@@ -86,12 +86,10 @@
           </div> <!-- /col-6 -->
 
           <div class="col-sm-6 bio">
-            <div class="form-group form-group-lg<?php if ($errors['bio']): ?> has-error <?php endif; ?>">
+            <div class="form-group <?php if ($errors['bio']): ?>has-error<?php endif;?>">
               <div>
-                <input id="bio" class="form-control input-lg" name="bio"
-                  placeholder="Bio (140 characters max)"
-                  value="<?= $user->bio; ?>">
-                <div class="help-block"><?= $errors['bio']; ?></div>
+                  <textarea id="bio" class="form-control" name="bio" placeholder="Bio (140 characters max)" value="<?= $user->bio; ?>" rows="8"></textarea>
+                  <div class="help-block"><?php echo $errors['bio']; ?></div>
               </div>
             </div>
           </div> <!-- /col-6 -->
