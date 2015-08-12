@@ -2,7 +2,7 @@
   <div class="container">
 
     <div>
-      <h1 class="text-center">Recent Posts</h1>
+      <h1 class="text-center">Trending on sosediNZ</h1>
     </div>
 
   </div><!-- /.container -->

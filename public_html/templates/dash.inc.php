@@ -7,7 +7,7 @@
 
     <div>
       <h4 class="media-heading"><?= $user->username; ?></h4>
-      <p class="lead"><?= $user->bio; ?></p>
+      <div class="col-sm-offset-2 col-sm-8"><p class="lead"><?= $user->bio; ?></p></div>
     </div>
   </div><!-- /.container -->
 </div><!-- /.user-info -->

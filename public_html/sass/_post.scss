@@ -5,8 +5,13 @@
 
 .post {
     background-color: #fff;
-    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     min-height: 100%;
+}
+
+.post-content {
+    padding-bottom: 2em;
 }
 
 .feature-img {
@@ -15,9 +20,42 @@
 }
 
 #comments {
-    margin-top: 1.5em;
     border-top: 2px solid #333;
-    padding-top: 0.5em;
+    padding: 1em;
+    padding-bottom: 1em;
+    background-color: #fff;
+
+    textarea {
+        border-radius: 0;
+    }
+}
+
+.comment-section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.comment {
+    padding-top: 0.8em;
+}
+
+.edit-comment {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.btn-comment {
+    border-radius: 0;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #333;
+    }
 }
 
 .search-results {
