@@ -27,6 +27,7 @@
     color: #fff;
     background-color: rgba(62, 63, 73, 0.5);
     border-color: transparent;
+    border-radius: 0;
 }
 
 .search {
@@ -37,6 +38,14 @@
     &:focus {
         border-color: transparent;
     }
+}
+
+.btn-browse {
+    color: #fff;
+    background-color: rgba(62, 63, 73, 0.5);
+    border-color: transparent;
+    margin-top: 0.6em;
+    border-radius: 0;
 }
 
 .btn-nav {
