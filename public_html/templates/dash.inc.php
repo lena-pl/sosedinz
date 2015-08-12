@@ -14,8 +14,12 @@
 
 <div class="container">
   <h3 class="text-center dash-heading">
-    <?php if (static::$auth->user()->id === $user->id): ?>
-      My posts
+    <?php if (static::$auth->check()): ?>
+      <?php if (static::$auth->user()->id === $user->id): ?>
+        My posts
+      <?php else: ?>
+        <?= $user->username ?>'s posts
+      <?php endif; ?>
     <?php else: ?>
       <?= $user->username ?>'s posts
     <?php endif; ?>
