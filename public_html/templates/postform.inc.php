@@ -9,13 +9,13 @@
 ?>
 
 <div class="post">
-  <div class="container">
+  <div class="container" id="form-edit">
 
     <form method="POST" action="<?= $submitAction ?>" class="form-horizontal" enctype="multipart/form-data">
     <?php if($post->id): ?>
       <input type="hidden" name="id" value="<?= $post->id ?>">
     <?php endif; ?>
-      <h1><?= $verb; ?> post</h1>
+      <h2 class="text-center"><?= $verb; ?> Post</h2>
 
         <div class="form-group form-group-lg<?php if ($errors['title']): ?> has-error <?php endif; ?>">
           <label for="title" class="col-sm-4 col-md-2 control-label">Post Title</label>
@@ -72,7 +72,7 @@
 
         <div class="form-group">
           <div class="col-sm-offset-4 col-sm-10 col-md-offset-2 col-md-10">
-            <button class="btn btn-success">
+            <button class="btn btn-comment">
               <span class="glyphicon glyphicon-ok"></span> <?= $verb; ?> post
               </button>
           </div>
@@ -85,7 +85,7 @@
         <div class="form-group">
           <div class="col-sm-offset-4 col-sm-10 col-md-offset-2 col-md-10">
             <input type="hidden" name="id" value="<?= $post->id ?>">
-            <button class="btn btn-danger">
+            <button class="btn btn-comment">
               <span class="glyphicon glyphicon-trash"></span> Delete Post
             </button>
           </div>

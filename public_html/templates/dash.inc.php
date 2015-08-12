@@ -45,7 +45,7 @@
               </div>
 
               <div>
-                <a href="./?page=post&amp;id=<?= $post->id ?>#comments"><?= count($post->comments()) ?> 
+                <a class="username" href="./?page=post&amp;id=<?= $post->id ?>#comments"><?= count($post->comments()) ?> 
                   <?php if (count($post->comments()) === 1): ?> 
                     comment
                   <?php else: ?>

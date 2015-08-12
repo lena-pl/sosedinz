@@ -39,7 +39,7 @@
     <?php if (static::$auth->check()): ?>
       <?php if (static::$auth->isOwner($post->user_id)): ?>
         <p>
-          <a href="./?page=post.edit&amp;id=<?= $post->id ?>" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit post</a>
+          <a href="./?page=post.edit&amp;id=<?= $post->id ?>" class="btn btn-comment"><span class="glyphicon glyphicon-pencil"></span> Edit post</a>
         </p>
       <?php endif; ?>
     <?php endif; ?>

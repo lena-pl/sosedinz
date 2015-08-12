@@ -35,7 +35,7 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
-                <button class="btn btn-block btn-register">Send Message</button>
+                <button class="btn btn-block btn-comment">Send Message</button>
             </div>
         </div>
 
