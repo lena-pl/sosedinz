@@ -5,7 +5,7 @@ namespace App\Controllers;
 use \App\Views\VisitorEmailView;
 use \App\Views\HostEmailView;
 use \App\Views\EmailSuccessView;
-use \App\VIews\ContactFormView;
+use \App\Views\ContactFormView;
 
 class ContactController extends Controller
 {

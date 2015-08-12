@@ -1,14 +1,11 @@
 <?php
   $errors = $comment->errors;
-  if ($comment->id) {
-    $submitAction = "./?page=comment.update";
-  }
 ?>
 
 <div class="post">
   <div class="container" id="form-edit">
 
-    <form method="POST" action="<?= $submitAction ?>" class="form-horizontal" enctype="multipart/form-data">
+    <form method="POST" action="./?page=comment.update" class="form-horizontal" enctype="multipart/form-data">
     <?php if($comment->id): ?>
       <input type="hidden" name="id" value="<?= $comment->id ?>">
     <?php endif; ?>

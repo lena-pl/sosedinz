@@ -32,8 +32,8 @@
 
           <div class="post-preview">
             <h4 class="text-center post-title"><a href="./?page=post&amp;id=<?= $post->id ?>">
-            <?= $post->title ?></a></h4>
-            <div><?= substr("$post->content", 0, 388) ?><a href="./?page=post&amp;id=<?= $post->id ?>"><span>…</span></a></div>
+            <?= htmlentities($post->title) ?></a></h4>
+            <div><?= htmlentities(substr("$post->content", 0, 388)) ?><a href="./?page=post&amp;id=<?= $post->id ?>"><span>…</span></a></div>
 
             <div class="extra">
               <div class="tags">

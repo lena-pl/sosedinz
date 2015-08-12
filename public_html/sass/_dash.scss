@@ -66,6 +66,14 @@
 	border-radius: 0;
 }
 
+.pagination>li>a, .pagination>li>span {
+	color: #333;
+
+	&:hover {
+		color: #6C7A89;
+	}
+}
+
 .pagination>li:first-child>a, .pagination>li:first-child>span {
 	border-radius: 0;
 }

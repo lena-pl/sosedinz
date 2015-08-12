@@ -21,14 +21,14 @@
 <div class="post">
   <div class="container">
 
-	<h2 class="text-center"><?= $post->title ?></h2>
+	<h2 class="text-center"><?= htmlentities($post->title) ?></h2>
 
   <div class="clearfix">
     <div class="col-sm-offset-1 col-sm-10">
       <?php if($post->feature_img != ""): ?>
         <p class="text-center"><img src="./images/features/300h/<?= $post->feature_img ?>" alt="" class="feature-img"></p>
       <?php endif; ?>
-      <p><?= $post->content ?></p>
+      <p><?= nl2br(htmlentities($post->content)); ?></p>
 
       <ul class="list-inline post-content">
         <?php foreach($tags as $tag): ?><!--
@@ -59,12 +59,16 @@
             <?php $count += 1; ?>
             <article id="comment-<?= $comment->id ?>" class="media comment">
               <div class="media-left">
-                <img class="dash-photo" src="<?= $comment->user()->gravatar(60, 'identicon') ?>" alt="">
+                <a class="username" href="./?page=dash&amp;id=<?= $comment->user_id ?>">
+                  <img class="dash-photo" src="<?= $comment->user()->gravatar(60, 'identicon') ?>" alt="">
+                </a>
               </div>
               <div class="media-body">
 
-                <h4 class="media-heading"><a class="username" href="./?page=dash&amp;id=<?= $comment->user_id ?>">
-                  <?= $comment->user()->username ?></a>
+                <h4 class="media-heading">
+                  <a class="username" href="./?page=dash&amp;id=<?= $comment->user_id ?>">
+                    <?= $comment->user()->username ?>
+                  </a>
 
                   <?php if (static::$auth->check()): ?>
                     <?php if (static::$auth->isOwner($comment->user_id)): ?>
@@ -75,7 +79,7 @@
                   <?php endif; ?>
                 </h4>
 
-                <p><?= $comment->comment ?></p>
+                <p><?= nl2br(htmlentities($comment->comment)) ?></p>
               </div>
             </article>
           <?php endforeach; ?>

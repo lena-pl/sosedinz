@@ -9,7 +9,7 @@ class CommentFormView extends TemplateView
     {
         extract($this->data);
         $verb = ( $comment->id? "Edit" : "Add" );
-        $page_title = $verb . " Post";
+        $page_title = "Edit Comment";
         $page="comment.form";
         include "templates/int-master.inc.php";
     }

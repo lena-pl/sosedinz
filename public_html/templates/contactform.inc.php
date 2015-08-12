@@ -25,7 +25,7 @@
               </div>
             </div>
 
-            <div class="form-group <?php if ($errors['mesage']): ?>has-error<?php endif;?>">
+            <div class="form-group <?php if ($errors['message']): ?>has-error<?php endif;?>">
                 <label for="message" class="col-sm-2 control-label">Your Message</label>
               <div class="col-sm-8">
                   <textarea id="mesage" class="form-control" name="message" placeholder="Write your message here..." value="<?php echo $contactform['message']; ?>" rows="5"></textarea>
