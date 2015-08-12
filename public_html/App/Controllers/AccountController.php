@@ -15,11 +15,6 @@ class AccountController extends Controller
 
     public function show()
     {
-        if (! static::$auth->check()) {
-            //do this if user is logged in
-            header("Location: ./?page=home");
-            exit();
-        } 
 
         if (!isset($_GET['id']) || $_GET['id'] <= 0) {
             header("Location: ./?page=dash&id=" . static::$auth->user()->id);
