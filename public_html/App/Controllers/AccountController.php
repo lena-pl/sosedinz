@@ -31,7 +31,7 @@ class AccountController extends Controller
 
         $user = User::findBy("id", $_GET['id']);
 
-        $recordCount = count($posts);
+        $recordCount = count(Post::allBy("user_id", $_GET['id'], "title"));
 
         $view = new DashView(compact('posts', 'user', 'pageSize', 'p', 'recordCount'));
         $view->render();
