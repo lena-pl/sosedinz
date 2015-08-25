@@ -6,3 +6,6 @@ Users can choose to register an account at sosediNZ after visiting the home page
 
 ## Link to project on Behance:
 [sosediNZ on Behance.net](http://on.be.net/1UEFVL6)
+
+## Link to live version of the site:
+[sosediNZ on Yoobee Server](http://we03.lena.plaksina.yoobee.net.nz/)
